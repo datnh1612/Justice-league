@@ -1,11 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="common">
+<div>
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
   <img width="800" alt="Justice League" src="./../assets/Justice-League-Gritty-Logo-Feature.jpg">
 </div>
-<app-heroes></app-heroes>
+<nav>
+  <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/dashboard">Dashboard</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
 </div>
 
