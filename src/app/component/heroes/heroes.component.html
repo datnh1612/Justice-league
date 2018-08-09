@@ -1,4 +1,16 @@
 <h2>Justice League</h2>
+
+<div>
+  <label>Hero name:
+    <!-- symbol # in input element mean id of value input-->
+    <input #heroName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(heroName.value); heroName.value=''">
+    Add
+  </button>
+</div>
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <div>
@@ -6,5 +18,6 @@
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </a>
     </div>
+    <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
   </li>
 </ul>
